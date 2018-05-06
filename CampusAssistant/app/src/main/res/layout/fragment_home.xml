@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/vgHeader"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true">
+
+            <RadioGroup
+                android:id="@+id/rg_home"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_function"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginRight="38dp"
+                    android:background="@color/transparent"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textColor="@color/function_head_tab_color_selector"
+                    android:textSize="17.5sp"
+                    android:text="功能"/>
+
+
+                <RadioButton
+                    android:id="@+id/rb_course"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/transparent"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textColor="@color/function_head_tab_color_selector"
+                    android:textSize="17.5sp"
+                    android:text="课表"/>
+
+            </RadioGroup>
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@id/vgHeader"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_line"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:src="@drawable/shape_line_navigation" />
+        </FrameLayout>
+
+        <View
+            android:id="@+id/viewDivider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_divider_line"/>
+
+    </RelativeLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="45dp" />
+
+</RelativeLayout>

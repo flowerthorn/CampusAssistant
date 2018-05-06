@@ -9,7 +9,7 @@ import android.widget.RadioGroup;
 import com.csxy.box.R;
 import com.csxy.box.base.BaseActivity;
 import com.csxy.box.base.BaseTabFragment;
-import com.csxy.box.business.function.FunctionFragment;
+import com.csxy.box.business.home.HomeFragment;
 import com.csxy.box.business.news.NewsFragment;
 import com.csxy.box.business.user.UserFragment;
 import com.csxy.box.utils.ToastUtils;
@@ -24,10 +24,10 @@ public class MainActivity extends BaseActivity implements MainContract.View {
 
     @BindView(R.id.rg_tab)
     RadioGroup mRadioGroup;
-    @BindView(R.id.rb_function)
+    @BindView(R.id.rb_home)
     RadioButton mRbFunction;
 
-    private FunctionFragment functionFragment;//默认主页
+    private HomeFragment homeFragment;//默认主页
     private NewsFragment newsFragment;//资讯页面
     private UserFragment userFragment;//我的页面
     private BaseTabFragment currentFragment;//当前fragment
@@ -53,9 +53,9 @@ public class MainActivity extends BaseActivity implements MainContract.View {
             }
         });
         userFragment = new UserFragment();
-        functionFragment = new FunctionFragment();
+        homeFragment = new HomeFragment();
         newsFragment = new NewsFragment();
-        lastCurrentFragment = functionFragment;
+        lastCurrentFragment = homeFragment;
         //初始化
         mRbFunction.setChecked(true);
     }
@@ -69,7 +69,7 @@ public class MainActivity extends BaseActivity implements MainContract.View {
         }
         transaction.show(fragment);
         fragment.onFragmentSelected();
-        if (fragment != functionFragment) transaction.hide(functionFragment);
+        if (fragment != homeFragment) transaction.hide(homeFragment);
         if (fragment != newsFragment) transaction.hide(newsFragment);
         if (fragment != userFragment) transaction.hide(userFragment);
         transaction.commitAllowingStateLoss();
@@ -80,8 +80,8 @@ public class MainActivity extends BaseActivity implements MainContract.View {
     private BaseTabFragment findFragmentById(int checkedId) {
         BaseTabFragment fragment = null;
         switch (checkedId) {
-            case R.id.rb_function:
-                fragment = functionFragment;
+            case R.id.rb_home:
+                fragment = homeFragment;
                 break;
             case R.id.rb_news:
                 fragment = newsFragment;

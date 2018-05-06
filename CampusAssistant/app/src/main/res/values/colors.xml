@@ -7,4 +7,8 @@
     <color name="main_tab_select_color">#3E3E3E</color>
     <color name="main_tab_normal_color">#2E2E2E</color>
     <color name="transparent">#00000000</color>
+    <color name="function_head_tab_color_normal">#9C9C9C</color>
+    <color name="function_head_tab_color_select">#343434</color>
+    <color name="yellow_bg_line">#FCD953</color>
+    <color name="gray_divider_line">#E6E6E6</color>
 </resources>

@@ -9,14 +9,12 @@ import android.view.ViewGroup;
 import com.csxy.box.R;
 import com.csxy.box.base.BaseTabFragment;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
  * Created by lihongxin on 2018/5/6.
  */
 public class FunctionFragment extends BaseTabFragment {
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
