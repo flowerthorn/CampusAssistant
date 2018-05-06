@@ -14,7 +14,7 @@ import android.widget.TextView;
 /**
  * Created by admin on 2016/12/9.
  */
-public class RViewHolder extends RecyclerView.ViewHolder  {
+public class RViewHolder extends RecyclerView.ViewHolder {
 
     private final Context mContext;
     private final int mLayoutId;

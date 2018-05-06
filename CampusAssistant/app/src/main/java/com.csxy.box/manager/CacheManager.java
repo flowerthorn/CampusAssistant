@@ -1,6 +1,7 @@
 package com.csxy.box.manager;
 
 import android.text.TextUtils;
+
 import com.csxy.box.app.MyApplication;
 import com.csxy.box.utils.L;
 import com.google.gson.Gson;

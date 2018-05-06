@@ -45,12 +45,14 @@ public class BaseActivity extends AppCompatActivity {
         mBaseContentView = inflater.inflate(layoutResID, mBaseFlParent, false);
         mBaseFlParent.addView(mBaseContentView);
     }
+
     @Override
     protected void onStart() {
         L.life(TAG, "onStart");
         super.onStart();
         //前台后台判断 如果需要
     }
+
     @Override
     protected void onRestart() {
         L.life(TAG, "onRestart");

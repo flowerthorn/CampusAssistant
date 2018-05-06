@@ -12,8 +12,10 @@ import android.graphics.drawable.Drawable;
 import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.util.Log;
+
 import com.csxy.box.app.MyApplication;
 import com.lib.mylibrary.cache.libcore.io.DiskLruCache;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -414,8 +416,8 @@ public class DiskLruCacheUtils {
         }
 
         /*
-             * Bitmap → Drawable
-             */
+         * Bitmap → Drawable
+         */
         @SuppressWarnings("deprecation")
         public static Drawable bitmap2Drawable(Bitmap bm) {
             if (bm == null) {

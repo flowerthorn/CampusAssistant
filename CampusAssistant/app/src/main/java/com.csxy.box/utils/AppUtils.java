@@ -47,8 +47,9 @@ public class AppUtils {
         }
         return false;
     }
+
     //去app设置界面
-    public static void  toAppDetailSettingActivity(Context context) {
+    public static void toAppDetailSettingActivity(Context context) {
         Intent localIntent = new Intent();
         localIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         if (Build.VERSION.SDK_INT >= 9) {
@@ -66,6 +67,7 @@ public class AppUtils {
     public static void openApp(Context context, String target) {
         context.startActivity(context.getPackageManager().getLaunchIntentForPackage(target));
     }
+
     public static boolean isInstallApp(String packageName) {
         return MyApplication.getContext().getPackageManager().getLaunchIntentForPackage(packageName) != null;
     }
