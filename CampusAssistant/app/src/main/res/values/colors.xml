@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#EFEFEF</color>
     <color name="colorAccent">#FF4081</color>
     <color name="white">#FFFFFF</color>
     <color name="main_tab_select_color">#3E3E3E</color>
@@ -14,4 +14,5 @@
     <color name="yellow_main">#FFF6C300</color>
     <color name="function_item_select" >#F6F6F6</color>
     <color name="black">#000000</color>
+    <color name="white_layout_bg">#FFF7F7F7</color>
 </resources>
