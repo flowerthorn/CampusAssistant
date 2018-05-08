@@ -40,8 +40,8 @@ public class HomeFragment extends BaseTabFragment {
     @BindView(R.id.rb_course)
     RadioButton rbCourse;
 
-    private FunctionFragment functionFragment;
-    private CourseFragment courseFragment;
+    private FunctionFragment functionFragment;// 功能页
+    private CourseFragment courseFragment;//课表页
     private FragmentPagerAdapter mPagerAdapter;
 
 

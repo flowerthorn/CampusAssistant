@@ -11,4 +11,7 @@
     <color name="function_head_tab_color_select">#343434</color>
     <color name="yellow_bg_line">#FCD953</color>
     <color name="gray_divider_line">#E6E6E6</color>
+    <color name="yellow_main">#FFF6C300</color>
+    <color name="function_item_select" >#F6F6F6</color>
+    <color name="black">#000000</color>
 </resources>
