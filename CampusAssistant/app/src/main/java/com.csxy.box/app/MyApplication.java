@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 
 import com.csxy.box.utils.L;
+import com.lib.mylibrary.utils.SpUtils;
 
 public class MyApplication extends Application {
 
@@ -26,5 +27,6 @@ public class MyApplication extends Application {
         L.life("Application", "onCreate");
         instance = this;
         context = this;
+        SpUtils.init("sp", this);
     }
 }

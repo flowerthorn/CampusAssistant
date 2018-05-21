@@ -39,7 +39,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:id="@+id/rl_course"
+                android:id="@+id/ll_course"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -66,7 +66,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/rl_book"
+                android:id="@+id/ll_book"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -93,7 +93,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/rl_grade"
+                android:id="@+id/ll_grade"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -128,7 +128,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:id="@+id/rl_study_room"
+                android:id="@+id/ll_study_room"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -155,7 +155,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/rl_level_4_6"
+                android:id="@+id/ll_level_4_6"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -207,7 +207,6 @@
 
     <TextView
         android:layout_width="wrap_content"
-
         android:layout_height="wrap_content"
         android:layout_below="@+id/ll_study"
         android:layout_marginLeft="5dp"
@@ -228,7 +227,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/rl_eat"
+            android:id="@+id/ll_eat"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -255,7 +254,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/rl_deliver"
+            android:id="@+id/ll_deliver"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -275,14 +274,14 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="5dp"
-                android:text="快递查询"
+                android:text="我的快递"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/rl_weather"
+            android:id="@+id/ll_weather"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_have_no_more"
+        android:layout_gravity="center"
+        android:layout_below="@+id/attention_swipe_refresh"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#C0C0C0"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:text="没有更多啦～"
+        />
+
+</LinearLayout>

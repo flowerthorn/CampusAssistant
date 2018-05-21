@@ -109,21 +109,4 @@ public class StringUtils {
 
         return true;
     }
-
-    public static Map<String, String> getOperationParams(String... args) {
-        Map<String, String> map = new HashMap<>(10);
-        List<String> argsList = Arrays.asList(args);
-        Iterator<String> iterator = argsList.iterator();
-
-        if (args.length % 2 == 0) {
-            while (iterator.hasNext()) {
-                map.put(iterator.next(), iterator.next());
-            }
-        }
-        return map;
-    }
-
-
-
-
 }

@@ -5,7 +5,7 @@ android {
     buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "com.csxy.box"
-        minSdkVersion 14
+        minSdkVersion 15
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
@@ -35,6 +35,8 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     implementation 'com.squareup.okhttp3:okhttp:3.6.0'
     implementation 'com.android.support:support-v4:26.+'
+    implementation 'com.github.chengzipi:Searchbox:v1.0.0'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
 
 
 

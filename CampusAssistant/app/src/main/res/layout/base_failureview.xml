@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/network_error" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="17dp"
+            android:layout_marginTop="31dp"
+            android:text="网络不给力"
+            android:textColor="#999999"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/repeat_request_btn"
+            android:layout_width="wrap_content"
+            android:paddingLeft="45dp"
+            android:paddingRight="45dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_repeatrequest"
+            android:text="重新加载"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+    </LinearLayout>
+</RelativeLayout>

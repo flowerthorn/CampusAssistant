@@ -3,6 +3,8 @@
     package="com.csxy.box">
 
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".app.MyApplication"
         android:allowBackup="true"
@@ -18,6 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".business.book.BookActivity"/>
+        <activity android:name=".business.book.BookResultActivity"/>
     </application>
 
 </manifest>

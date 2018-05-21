@@ -15,4 +15,11 @@
     <color name="function_item_select" >#F6F6F6</color>
     <color name="black">#000000</color>
     <color name="white_layout_bg">#FFF7F7F7</color>
+    <color name="item_select_bg">#F6F6F6</color>
+    <color name="yellow_bg_1">#FCD953</color>
+    <color name="yellow_bg_2">#e3c34a</color>
+    <color name="progressbar_color">#515150</color>
+    <color name="deep_gray">#666666</color>
+    <color name="state_green">#5ba927</color>
+    <color name="state_red">#c73a25</color>
 </resources>
