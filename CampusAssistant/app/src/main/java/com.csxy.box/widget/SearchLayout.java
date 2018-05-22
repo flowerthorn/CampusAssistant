@@ -4,10 +4,12 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.ColorDrawable;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -89,6 +91,7 @@ public class SearchLayout extends LinearLayout {
     }
 
     private void setLinstener() {
+
         this.ib_searchtext_delete.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 et_searchtext_search.setText("");

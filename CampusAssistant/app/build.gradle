@@ -37,6 +37,7 @@ dependencies {
     implementation 'com.android.support:support-v4:26.+'
     implementation 'com.github.chengzipi:Searchbox:v1.0.0'
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    implementation 'org.litepal.android:core:1.6.1'
 
 
 

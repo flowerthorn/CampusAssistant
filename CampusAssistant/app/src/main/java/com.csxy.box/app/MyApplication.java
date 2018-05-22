@@ -1,12 +1,11 @@
 package com.csxy.box.app;
 
-import android.app.Application;
 import android.content.Context;
-
 import com.csxy.box.utils.L;
 import com.lib.mylibrary.utils.SpUtils;
+import org.litepal.LitePalApplication;
 
-public class MyApplication extends Application {
+public class MyApplication extends LitePalApplication {
 
     public final static String TAG = "__CSXY.";
 

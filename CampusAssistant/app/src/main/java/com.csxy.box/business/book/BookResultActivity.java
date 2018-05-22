@@ -8,12 +8,14 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.csxy.box.R;
 import com.csxy.box.adapter.BookAdapter;
 import com.csxy.box.base.BaseActivity;
+import com.csxy.box.bean.BookItem;
 import com.csxy.box.bean.BookObj;
 import com.csxy.box.widget.FunctionView;
 import com.csxy.box.widget.RefreshFooterView;
@@ -42,6 +44,7 @@ public class BookResultActivity extends BaseActivity {
     @BindView(R.id.rl_no_book)
     RelativeLayout rlNoBook;
 
+
     private SmartRefreshLayout smartRefreshLayout;
     private RecyclerView mBookRecyclerView;
     private BookAdapter mBookAdapter;
@@ -50,10 +53,10 @@ public class BookResultActivity extends BaseActivity {
     private TextView tvBookTotal;
     private String bookKey;
     private String type;
-    private List<BookObj.BookItem> bookItems;
+    private List<BookItem> bookItems;
 
 
-    public static void actionShow(Context context, String type, List<BookObj.BookItem> bookItemList, String bookKey) {
+    public static void actionShow(Context context, String type, List<BookItem> bookItemList, String bookKey) {
         Intent intent = new Intent(context, BookResultActivity.class);
         intent.putExtra("type", type);
         intent.putExtra("bookItem", (Serializable) bookItemList);
@@ -81,7 +84,7 @@ public class BookResultActivity extends BaseActivity {
     private void initDatas() {
         bookKey = getIntent().getStringExtra("bookKey");
         type = getIntent().getStringExtra("type");
-        bookItems = (List<BookObj.BookItem>) getIntent().getSerializableExtra("bookItem");
+        bookItems = (List<BookItem>) getIntent().getSerializableExtra("bookItem");
     }
 
     private void initViews() {
@@ -116,7 +119,7 @@ public class BookResultActivity extends BaseActivity {
      * @param refreshLayout
      * @param bookItemList
      */
-    public void showSearchBookList(String action, RefreshLayout refreshLayout, final List<BookObj.BookItem> bookItemList) {
+    public void showSearchBookList(String action, RefreshLayout refreshLayout, final List<BookItem> bookItemList) {
         if (!CheckUtils.isEmpty(bookItemList)) {
             tvBookTotal.setText("为您查找到" + bookItemList.size() + "条【" + bookKey + "】相关的图书结果");
             if (lastItemPosition < bookItemList.size()) {
@@ -147,8 +150,16 @@ public class BookResultActivity extends BaseActivity {
         });
     }
 
-    public void showMyBookList(List<BookObj.BookItem> bookItemList) {
-
+    public void showMyBookList(List<BookItem> bookItemList) {
+        tvTitle.setText("我的收藏");
+        tvBookTotal.setText("您一共有"+bookItemList.size()+"本收藏");
+        smartRefreshLayout.setEnableLoadMore(false);
+        if (!CheckUtils.isEmpty(bookItemList)) {
+            mBookAdapter.addData(bookItemList, "new");
+        }
+        else {
+            rlNoBook.setVisibility(View.VISIBLE);
+        }
     }
 
 

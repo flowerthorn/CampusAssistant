@@ -20,7 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".business.book.BookActivity"/>
+        <activity android:name=".business.book.BookActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
         <activity android:name=".business.book.BookResultActivity"/>
     </application>
 
