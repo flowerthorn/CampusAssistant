@@ -1,4 +1,4 @@
-package com.csxy.box.interfaces;
+package com.csxy.box.base.interfaces;
 
 import android.content.Context;
 

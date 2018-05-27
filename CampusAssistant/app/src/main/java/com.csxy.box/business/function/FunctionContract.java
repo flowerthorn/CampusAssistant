@@ -1,7 +1,7 @@
 package com.csxy.box.business.function;
 
-import com.csxy.box.interfaces.BasePresenter;
-import com.csxy.box.interfaces.BaseView;
+import com.csxy.box.base.interfaces.BasePresenter;
+import com.csxy.box.base.interfaces.BaseView;
 
 /**
  * Created by lihongxin on 2018/5/21.

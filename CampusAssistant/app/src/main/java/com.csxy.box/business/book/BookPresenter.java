@@ -66,17 +66,7 @@ public class BookPresenter implements BookContract.Presenter {
 
     @Override
     public void searchMyBookList() {
-        List<BookItem> allCollectBooks = DataSupport.findAll(BookItem.class);
+        List<BookItem> allCollectBooks = DataSupport.order("id desc").find(BookItem.class);
         BookResultActivity.actionShow(mBookView.getContext(), "my_book", allCollectBooks, "");
-    }
-
-    @Override
-    public List<String> getRecentSearchBook() {
-        return recentSearchBook;
-    }
-
-    @Override
-    public List<String> getHotSearchBook() {
-        return hotSearchBook;
     }
 }

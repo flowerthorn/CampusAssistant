@@ -17,6 +17,7 @@ import com.csxy.box.adapter.BookAdapter;
 import com.csxy.box.base.BaseActivity;
 import com.csxy.box.bean.BookItem;
 import com.csxy.box.bean.BookObj;
+import com.csxy.box.utils.L;
 import com.csxy.box.widget.FunctionView;
 import com.csxy.box.widget.RefreshFooterView;
 import com.lib.mylibrary.utils.CheckUtils;
@@ -25,6 +26,7 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -117,18 +119,22 @@ public class BookResultActivity extends BaseActivity {
     /**
      * @param action        "new"和"old"
      * @param refreshLayout
-     * @param bookItemList
+     * @param bookList
      */
-    public void showSearchBookList(String action, RefreshLayout refreshLayout, final List<BookItem> bookItemList) {
-        if (!CheckUtils.isEmpty(bookItemList)) {
-            tvBookTotal.setText("为您查找到" + bookItemList.size() + "条【" + bookKey + "】相关的图书结果");
-            if (lastItemPosition < bookItemList.size()) {
-                if (lastItemPosition + 10 < bookItemList.size()) {
-                    mBookAdapter.addData(bookItemList.subList(lastItemPosition, lastItemPosition + 10), action);
+    public void showSearchBookList(String action, RefreshLayout refreshLayout, final List<BookItem> bookList) {
+        if (!CheckUtils.isEmpty(bookList)) {
+            L.d("bookItemList  SIZE", bookList.size() + "");
+            tvBookTotal.setText("为您查找到" + bookList.size() + "条【" + bookKey + "】相关的图书结果");
+            if (lastItemPosition < bookList.size()) {
+                if (lastItemPosition + 10 < bookList.size()) {
+                    List<BookItem> sub = new ArrayList<>(bookList.subList(lastItemPosition, lastItemPosition+10));
+                    mBookAdapter.addData(sub, action);
                     lastItemPosition += 10;
                 } else {
-                    mBookAdapter.addData(bookItemList.subList(lastItemPosition, bookItemList.size()), action);
-                    lastItemPosition = bookItemList.size();
+                    //防止list发生改变 注意:慎用sublist
+                    List<BookItem> sub = new ArrayList<>(bookList.subList(lastItemPosition, bookList.size()));
+                    mBookAdapter.addData(sub, action);
+                    lastItemPosition = bookList.size();
                 }
             } else {
                 refreshLayout.finishLoadMore();
@@ -145,19 +151,18 @@ public class BookResultActivity extends BaseActivity {
             @Override
             public void onLoadMore(RefreshLayout refreshLayout) {
                 refreshLayout.finishLoadMore(1000);
-                showSearchBookList("old", refreshLayout, bookItemList);
+                showSearchBookList("old", refreshLayout, bookList);
             }
         });
     }
 
     public void showMyBookList(List<BookItem> bookItemList) {
         tvTitle.setText("我的收藏");
-        tvBookTotal.setText("您一共有"+bookItemList.size()+"本收藏");
+        tvBookTotal.setText("您一共有" + bookItemList.size() + "本收藏");
         smartRefreshLayout.setEnableLoadMore(false);
         if (!CheckUtils.isEmpty(bookItemList)) {
             mBookAdapter.addData(bookItemList, "new");
-        }
-        else {
+        } else {
             rlNoBook.setVisibility(View.VISIBLE);
         }
     }

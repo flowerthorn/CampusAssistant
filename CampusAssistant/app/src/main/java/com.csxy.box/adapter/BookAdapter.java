@@ -62,7 +62,6 @@ public class BookAdapter extends BaseRAdapter {
             tvLocation.setText(bookItems.get(position).getPlace());
             tvSearch.setText(bookItems.get(position).getSearch());
             tvPress.setText(bookItems.get(position).getPress());
-            L.d("SQL _book_id",bookItems.get(position).getNo()+"");
             if (DataSupport.isExist(BookItem.class,"no = ?",bookItems.get(position).getNo())) {
                 //已经收藏
                 ivCollect.setImageResource(R.drawable.collect_finish);

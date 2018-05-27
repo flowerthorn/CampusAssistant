@@ -1,4 +1,4 @@
-package com.csxy.box.interfaces;
+package com.csxy.box.base.interfaces;
 
 /**
  * Created by lihongxin on 2018/5/6.
