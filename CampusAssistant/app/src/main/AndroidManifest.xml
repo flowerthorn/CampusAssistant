@@ -23,6 +23,7 @@
         <activity android:name=".business.book.BookActivity"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
         <activity android:name=".business.book.BookResultActivity"/>
+        <activity android:name=".business.h5.WebViewActivty"/>
     </application>
 
 </manifest>

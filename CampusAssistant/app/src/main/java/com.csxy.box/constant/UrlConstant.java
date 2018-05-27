@@ -10,4 +10,5 @@ public class UrlConstant {
     private static final String LIBRARY = "appLibrary/title/";
     // 图书搜索接口
     public static final String SEARCH_BOOK = HTTP + SERVER_HOST + BASE + LIBRARY;
+    public static final String DELIVER_QUERY="http://m.kuaidi100.com/index_all.html";
 }
