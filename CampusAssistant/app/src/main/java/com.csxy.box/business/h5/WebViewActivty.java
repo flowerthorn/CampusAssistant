@@ -2,10 +2,12 @@ package com.csxy.box.business.h5;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.http.SslError;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.webkit.SslErrorHandler;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
@@ -16,6 +18,12 @@ import android.widget.TextView;
 
 import com.csxy.box.R;
 import com.csxy.box.base.BaseActivity;
+import com.csxy.box.utils.L;
+import com.lib.mylibrary.utils.CheckUtils;
+
+import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -37,13 +45,15 @@ public class WebViewActivty extends BaseActivity {
     private boolean isNetError = false;
     private String url;
     private String title;
+    private Map<String,String> extraHeaders=new HashMap<>();
 
-    public static void actionShow(Context context,String title, String url) {
+
+    public static void actionShow(Context context, String title, String url, Map<String,String> extraHeaders) {
         Intent intent = new Intent(context, WebViewActivty.class);
         intent.putExtra("title", title);
         intent.putExtra("url", url);
+        intent.putExtra("extraHeaders", (Serializable) extraHeaders);
         context.startActivity(intent);
-
     }
 
     @Override
@@ -53,9 +63,17 @@ public class WebViewActivty extends BaseActivity {
         ButterKnife.bind(this);
         url=getIntent().getStringExtra("url");
         title=getIntent().getStringExtra("title");
+        extraHeaders= (Map<String, String>) getIntent().getSerializableExtra("extraHeaders");
         tvTitle.setText(title);
         initWebViewSettings();
-        mWebView.loadUrl(url);
+        if (extraHeaders==null||extraHeaders.size()==0){
+            mWebView.loadUrl(url);
+        }
+        else {
+            L.d("mangguo","tag webview");
+            mWebView.loadUrl(url,extraHeaders);
+        }
+
 
     }
 
@@ -71,6 +89,7 @@ public class WebViewActivty extends BaseActivity {
         webSettings.setSupportZoom(true);//是否支持缩放
         webSettings.setBuiltInZoomControls(true);//添加对js功能的支持
         webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
+        webSettings.setDomStorageEnabled(true);  // 存储(storage)
         mWebView.setWebViewClient(new WebViewClient() {
             @Override
             public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
@@ -98,6 +117,12 @@ public class WebViewActivty extends BaseActivity {
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
                 super.onReceivedError(view, errorCode, description, failingUrl);
             }
+
+            @Override
+            public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
+                super.onReceivedSslError(view, handler, error);
+                handler.proceed();
+            }
         });
         mWebView.setWebChromeClient(new WebChromeClient(){
             @Override
@@ -121,4 +146,9 @@ public class WebViewActivty extends BaseActivity {
         tvTitle.setText(title);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mWebView.destroy();
+    }
 }

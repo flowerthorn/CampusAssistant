@@ -48,7 +48,7 @@ public class FunctionPresenter implements FunctionContract.Presenter {
     //快递查询
     @Override
     public void gotoDeliver() {
-        WebViewActivty.actionShow(mFunctionView.getContext(),"快递查询", UrlConstant.DELIVER_QUERY);
+        WebViewActivty.actionShow(mFunctionView.getContext(),"快递查询", UrlConstant.DELIVER_QUERY,null);
 
     }
 
