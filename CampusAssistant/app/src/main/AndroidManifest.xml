@@ -32,6 +32,8 @@
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
         <activity android:name=".business.book.BookResultActivity" />
         <activity android:name=".business.h5.WebViewActivty" />
+        <activity android:name=".business.weather.WeatherActivity"/>
+        <activity android:name=".business.weather.WeatherSearchActivity"/>
     </application>
 
 </manifest>

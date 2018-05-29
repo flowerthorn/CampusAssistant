@@ -20,7 +20,7 @@ import java.lang.reflect.Method;
  * Created by lihongxin on 2018/5/5.
  */
 public class StatusBarUtils {
-    // 使Activity布局填充状态栏
+    // 使Activity布局填充状态栏 全屏--有状态栏
     public static void fillStatusBar(Activity activity) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             View decorView = activity.getWindow().getDecorView();
@@ -105,7 +105,7 @@ public class StatusBarUtils {
     }
 
     //全屏布局实现方式1
-    //带状态栏的全屏--内容可伸展到状态栏
+    //带状态栏的全屏--内容可伸展到状态栏 测试可用
     public static void setFullScreenWithStatusBar(Activity activity) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             // 设置状态栏透明

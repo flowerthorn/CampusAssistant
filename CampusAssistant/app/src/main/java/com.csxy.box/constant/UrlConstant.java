@@ -14,4 +14,7 @@ public class UrlConstant {
     public static final String DELIVER_QUERY="http://m.kuaidi100.com/index_all.html";
     //城院全景链接
     public static final String SCENER="http://720yun.com/t/a9625wa6xnw";
+    //查询天气
+    public static String Weather_BASE_URL = "http://weather.123.duba.net/static/weather_info/";
+
 }

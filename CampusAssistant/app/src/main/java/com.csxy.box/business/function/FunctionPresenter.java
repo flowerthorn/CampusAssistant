@@ -2,6 +2,7 @@ package com.csxy.box.business.function;
 
 import com.csxy.box.business.book.BookActivity;
 import com.csxy.box.business.h5.WebViewActivty;
+import com.csxy.box.business.weather.WeatherActivity;
 import com.csxy.box.constant.UrlConstant;
 import com.csxy.box.net.ApiRequest;
 
@@ -54,6 +55,6 @@ public class FunctionPresenter implements FunctionContract.Presenter {
 
     @Override
     public void gotoWeather() {
-
+        WeatherActivity.actionShow(mFunctionView.getContext());
     }
 }

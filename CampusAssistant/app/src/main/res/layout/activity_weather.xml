@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/weather_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/weather_bg_night">
+
+
+    <ImageView
+        android:id="@+id/search_iv"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/weather_search" />
+
+    <TextView
+        android:id="@+id/city_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="北京"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/pm_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/city_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:text="PM:16 优"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <!--中间的天气部分-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:id="@+id/relativeLayout"
+        android:layout_below="@+id/search_iv"
+        android:layout_alignLeft="@+id/search_iv"
+        android:layout_alignStart="@+id/search_iv"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp">
+        <!--气温-->
+        <TextView
+            android:id="@+id/temp_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20度"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+        <!--天气-->
+        <TextView
+            android:id="@+id/weather_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="晴 20°C~25°C"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/temp_tv"
+            android:layout_alignBottom="@id/temp_tv"/>
+        <!--风向-->
+        <TextView
+            android:id="@+id/wind_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/temp_tv"
+            android:layout_below="@id/temp_tv"
+            android:layout_marginTop="18dp"
+            android:text="西风 1级"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+        <!--日期-->
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/wind_tv"
+            android:layout_below="@id/wind_tv"
+            android:layout_marginTop="15dp"
+            android:text="2016年6月27日 星期一"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/weather_other_sv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <LinearLayout
+            android:id="@+id/weather_other_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+</RelativeLayout>
