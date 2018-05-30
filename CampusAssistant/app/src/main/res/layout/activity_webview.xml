@@ -3,30 +3,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <LinearLayout
         android:id="@+id/llTitle"
         android:layout_width="match_parent"
         android:layout_height="46.5dp"
         android:orientation="vertical">
+
         <include layout="@layout/layout_titlebar" />
+
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:background="#DEDFE0" />
     </LinearLayout>
-    <WebView
-        android:layout_below="@id/llTitle"
-        android:id="@+id/webView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </WebView>
-    <include
-        android:layout_below="@id/llTitle"
-        layout="@layout/base_failureview"
-        android:id="@+id/error_layout"
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/llTitle">
+
+        <ImageView
+            android:id="@+id/iv_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="center"
+            android:src="@drawable/webview_loading" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_loading"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="正在加载中"
+            android:textColor="#121111"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/llTitle"
+        android:visibility="gone">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></WebView>
+
+    </RelativeLayout>
+
+
+    <include
+        android:id="@+id/error_layout"
+        layout="@layout/base_failureview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/llTitle"
         android:background="@color/white"
-        android:visibility="gone"
-        />
+        android:visibility="gone" />
 </RelativeLayout>

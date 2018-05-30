@@ -39,7 +39,7 @@ public class FunctionPresenter implements FunctionContract.Presenter {
 
     @Override
     public void gotoLevel() {
-
+        WebViewActivty.actionShow(mFunctionView.getContext(),"四六级查询", UrlConstant.LEVEL_QUERY,null);
     }
 
     @Override

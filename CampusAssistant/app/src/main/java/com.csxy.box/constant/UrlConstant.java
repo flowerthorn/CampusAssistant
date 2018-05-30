@@ -16,5 +16,7 @@ public class UrlConstant {
     public static final String SCENER="http://720yun.com/t/a9625wa6xnw";
     //查询天气
     public static String Weather_BASE_URL = "http://weather.123.duba.net/static/weather_info/";
+    //查询四六级
+    public static String LEVEL_QUERY="http://weixiao.qq.com/apps/public/cet/index.html";
 
 }
