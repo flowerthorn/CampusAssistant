@@ -211,5 +211,5 @@ public class WebViewActivty extends BaseActivity {
         cookieManager.setAcceptCookie(true);
         cookieManager.removeSessionCookie();//移除
     }
-    
+
 }

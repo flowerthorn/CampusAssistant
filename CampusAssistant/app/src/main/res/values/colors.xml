@@ -22,4 +22,5 @@
     <color name="deep_gray">#666666</color>
     <color name="state_green">#5ba927</color>
     <color name="state_red">#c73a25</color>
+    <color name="yellow_status_bar">#ebb812</color>
 </resources>

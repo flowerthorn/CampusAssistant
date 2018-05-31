@@ -1,6 +1,7 @@
 package com.csxy.box.business.function;
 
 import com.csxy.box.business.book.BookActivity;
+import com.csxy.box.business.eat.EatActivity;
 import com.csxy.box.business.h5.WebViewActivty;
 import com.csxy.box.business.weather.WeatherActivity;
 import com.csxy.box.constant.UrlConstant;
@@ -44,6 +45,7 @@ public class FunctionPresenter implements FunctionContract.Presenter {
 
     @Override
     public void gotoEat() {
+        EatActivity.actionShow(mFunctionView.getContext());
 
     }
     //快递查询

@@ -34,6 +34,7 @@
         <activity android:name=".business.h5.WebViewActivty" />
         <activity android:name=".business.weather.WeatherActivity"/>
         <activity android:name=".business.weather.WeatherSearchActivity"/>
+        <activity android:name=".business.eat.EatActivity"/>
     </application>
 
 </manifest>
