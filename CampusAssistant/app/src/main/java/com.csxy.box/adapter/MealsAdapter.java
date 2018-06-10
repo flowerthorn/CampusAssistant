@@ -9,9 +9,8 @@ import android.widget.TextView;
 import com.csxy.box.R;
 import com.csxy.box.base.adapter.BaseRAdapter;
 import com.csxy.box.base.adapter.RViewHolder;
-import com.csxy.box.bean.BookItem;
 import com.csxy.box.bean.MealItem;
-import com.csxy.box.widget.AlertCenter;
+import com.csxy.box.widget.alert.AlertCenter;
 
 import org.litepal.crud.DataSupport;
 

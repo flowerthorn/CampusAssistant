@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 
 import com.csxy.box.R;
 import com.csxy.box.base.BaseTabFragment;
+import com.csxy.box.utils.ToastUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -103,6 +104,14 @@ public class FunctionFragment extends BaseTabFragment implements FunctionContrac
     @OnClick(R.id.ll_weather)
     public void weatherOnClick() {
         mPresenter.gotoWeather();
+    }
+
+    /**
+     * 点击查看自习室
+     */
+    @OnClick(R.id.ll_study_room)
+    public void roomOnClick() {
+        ToastUtils.showLongToast("正在更新该接口，敬请期待");
     }
 
 }

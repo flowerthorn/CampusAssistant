@@ -39,6 +39,7 @@
         <activity android:name=".business.eat.MealsActivity"/>
         <activity android:name=".business.other.FeedBackActivity"/>
         <activity android:name=".business.other.AboutActivity"/>
+        <activity android:name=".business.other.LoginActivity"/>
     </application>
 
 </manifest>

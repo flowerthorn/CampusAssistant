@@ -8,7 +8,7 @@ import com.csxy.box.base.adapter.BaseRAdapter;
 import com.csxy.box.base.adapter.RViewHolder;
 import com.csxy.box.bean.EatItem;
 import com.csxy.box.business.eat.MealsActivity;
-import com.csxy.box.widget.AlertCenter;
+import com.csxy.box.widget.alert.AlertCenter;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -25,4 +25,6 @@ public class GlobalPreferences {
     public static void removeRecentSearchBooks() {
         SpUtils.remove("recentSearchBook");
     }
+
+
 }

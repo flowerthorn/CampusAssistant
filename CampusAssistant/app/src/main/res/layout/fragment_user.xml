@@ -50,7 +50,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="25dp"
                     android:layout_toRightOf="@+id/iv_avatar"
-                    android:text="李鸿鑫"
+                    android:text="游客"
                     android:textColor="#333333"
                     android:textSize="18sp" />
 
@@ -61,7 +61,7 @@
                     android:layout_alignLeft="@+id/tv_name"
                     android:layout_alignStart="@+id/tv_name"
                     android:layout_below="@+id/tv_name"
-                    android:text="学号:20141110"
+                    android:text="无"
                     android:textColor="#666666"
                     android:textSize="14sp" />
 
@@ -302,7 +302,7 @@
                 android:background="#4ad9d9d9" />
 
             <RelativeLayout
-                android:id="@+id/ll_exit"
+                android:id="@+id/rl_exit"
                 android:layout_width="match_parent"
                 android:layout_height="46dp"
                 android:background="@drawable/function_item_selector"

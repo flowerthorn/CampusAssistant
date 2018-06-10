@@ -1,6 +1,7 @@
-package com.csxy.box.widget;
+package com.csxy.box.widget.alert;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
@@ -68,4 +69,38 @@ public class AlertCenter {
             }
         });
     }
+
+    public static Dialog getExitWxDialog(final Context mContext, final Callback<Dialog> onExitCallback) {
+
+        Dialog exitDialog = PmAlert.getTwoButtonAlert(mContext,
+                "退出确认",
+                "退出当前帐号，将不能查看课表和成绩",
+                "取消",
+                "确认退出",
+                false,
+                new OnAlertClickListener2() {
+                    @Override
+                    public void onPositiveClick(Dialog dialog) {
+                        //取消
+                        dialog.dismiss();
+
+                    }
+
+                    @Override
+                    public void onNegativeClick(Dialog dialog) {
+                        //确认退出
+                        onExitCallback.onCallback(dialog);
+                    }
+                }
+        );
+        exitDialog.setCancelable(true);
+        return exitDialog;
+    }
+
+    public interface Callback<T> {
+
+        public void onCallback(T obj);
+
+    }
+
 }
