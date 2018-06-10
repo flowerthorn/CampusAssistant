@@ -25,4 +25,5 @@
     <color name="yellow_status_bar">#ebb812</color>
     <color name="call_tel_pressed">#A8A8A8</color>
     <color name="call_tel_normal">#222222</color>
+    <color name="black_text">#333333</color>
 </resources>

@@ -24,6 +24,7 @@ public class UrlConstant {
     public static final String Weather_BASE_URL = "http://weather.123.duba.net/static/weather_info/";
     //查询四六级
     public static final String LEVEL_QUERY = "http://weixiao.qq.com/apps/public/cet/index.html";
-
+    //程序GitHub 链接
+    public static final String MY_GITHUB = "https://github.com/flowerthorn/CampusAssistant";
 
 }

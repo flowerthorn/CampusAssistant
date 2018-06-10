@@ -37,6 +37,8 @@
         <activity android:name=".business.weather.WeatherSearchActivity"/>
         <activity android:name=".business.eat.EatActivity"/>
         <activity android:name=".business.eat.MealsActivity"/>
+        <activity android:name=".business.other.FeedBackActivity"/>
+        <activity android:name=".business.other.AboutActivity"/>
     </application>
 
 </manifest>

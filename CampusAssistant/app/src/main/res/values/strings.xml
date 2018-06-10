@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">城院校园通</string>
+    <string name="question_and_advice">问题和意见</string>
+    <string name="feed_least_limit">请填写10字以上的问题描述</string>
+    <string name="feed_most_limit">请填写200字以下的问题描述</string>
+    <string name="feed_contact_way">电话、微信或者QQ</string>
+    <string name="feed_info">您的联系方式有助于我们沟通和解决问题，仅工作人员可见</string>
+
 </resources>

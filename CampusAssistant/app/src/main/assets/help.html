@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)file:///Users/lihongxin/Desktop/help.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title></title>
+        <style>
+            .aboutall{ display: block;margin:0 auto;width: 70%; padding-bottom: 2vh; }
+            .list-group {
+                padding-left: 0;
+                margin-bottom: 20px;
+            }
+            .list-group-item {
+                position: relative;
+                display: block;
+                padding: 10px 15px;
+                margin-bottom: -1px;
+                background-color: #fff;
+                border: 1px solid #ddd;
+            }
+            .list-group-item:first-child {
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+            .list-group-item:last-child {
+                margin-bottom: 0;
+                border-bottom-right-radius: 4px;
+                border-bottom-left-radius: 4px;
+            }
+            .helpcontent{
+                display: none;
+                padding-top: 10px;
+                font-size: 15px;
+                height: 0px;
+                overflow: hidden;
+            }
+            .helptitle{
+                font-weight: bold;
+                font-family: 微软雅黑, 宋体, 黑体, Arial;
+                font-size: 15px;
+                color: #333333;
+                width: 100%;
+                line-height: 15px;
+            }
+            .closeicon
+            {
+                position:absolute;
+                left: 90%;
+                /*transform:translateY(50%) rotate(315deg);*/
+                -webkit-transform:translateY(-130%) rotate(315deg);
+                width:13px;
+                height:13px;
+                border-bottom:2px solid #838383;
+                border-left:2px solid #838383;
+                cursor:pointer;
+                display: block;
+            }
+            .openicon
+            {
+                display: none;
+                position:absolute;
+                left: 90%;
+                transform:translateY(50%) rotate(315deg);
+                -webkit-transform:translateY(-70%) rotate(135deg);
+                width:13px;
+                height:13px;
+                border-bottom:2px solid #838383;
+                border-left:2px solid #838383;
+                cursor:pointer;
+            }
+            body{
+                background: #F0EFF5;
+            }
+            .copyrighttitle{
+                color: #333333;
+                font-size: 15px;
+                font-weight: bold;
+                text-align: center;
+                margin: 2px;
+                margin-bottom: 5px;
+            }
+            .copyright{
+                margin: 2px;
+            }
+            .copyrightcontent{
+                margin: 2px;
+                font-size: 15px;
+            }
+            .divuserid{
+                margin: 2px;
+                margin-top: 10px;
+                font-weight: bold;
+                font-family: 微软雅黑, 宋体, 黑体, Arial;
+                color: #333333;
+            }
+            .helpbutton{
+                padding: 30px;
+                text-align: center;
+                display: block;
+                width: 80%;
+                margin: 0;
+            }
+            .helpbutton img{
+                display: block;
+                width: 70%;
+            }
+            .img-thumbnail {
+                display: inline-block;
+                max-width: 100%;
+                height: auto;
+                padding: 4px;
+                line-height: 1.42857143;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                -webkit-transition: all .2s ease-in-out;
+                -o-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+            }
+            .kefuqq{
+                width: 100%;
+                display: block;
+                margin-bottom: 10px;
+                margin-top: 10px;
+                background-color: #ffffff;
+                text-align: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        </style>
+
+        <script>
+            lasttime=0;
+            function toggle(obj)
+            {
+                if(Date.parse(new Date())-lasttime<100)
+                {
+                    return;
+                }
+                lasttime=Date.parse(new Date());
+
+                var i=0;
+                var no=obj.getAttribute("data-no");
+
+                var oldstyle=document.getElementById("closeicon_"+no).style.display;
+
+                var arr_helpcontent=document.getElementsByClassName("helpcontent");
+                for( i=0;i<arr_helpcontent.length;i++)
+                {
+                    // arr_helpcontent[i].style.display="none";
+                    hideSlow(arr_helpcontent[i]);
+                }
+                var arr_colseicon=document.getElementsByClassName("closeicon");
+                var arr_openicon=document.getElementsByClassName("openicon");
+                for( i=0;i<arr_colseicon.length;i++)
+                {
+                    arr_colseicon[i].style.display="block";
+                    arr_openicon[i].style.display="none";
+                }
+                if(oldstyle=="none")//原来是关闭着的
+                {
+                    document.getElementById("closeicon_"+no).style.display="block";
+                    document.getElementById("openicon_"+no).style.display="none";
+                    //document.getElementById("helpcontent_"+no).style.display="none";
+                    hideSlow(document.getElementById("helpcontent_"+no));
+                }else//原来是开着的
+                {
+                    document.getElementById("closeicon_"+no).style.display="none";
+                    document.getElementById("openicon_"+no).style.display="block";
+                    // document.getElementById("helpcontent_"+no).style.display="block";
+                    showSlow(document.getElementById("helpcontent_"+no));
+                }
+            }
+
+            function showSlow(obj)
+            {
+                obj.style.display = 'block';
+                if(obj.clientHeight<obj.scrollHeight){
+                    obj.style.height=50+obj.clientHeight+"px";
+                    setTimeout(function(){showSlow(obj)},30)
+                }else{
+                    obj.style.height=obj.scrollHeight+"px";
+                }
+            }
+            function hideSlow(obj)
+            {
+                if(obj.clientHeight>10)
+                {
+                    obj.style.height=getRountHeight(obj.clientHeight-50)+"px";
+                    setTimeout(function(){hideSlow(obj)},30)
+                }else
+                {
+                    obj.style.height=0;
+                    obj.style.display = 'none';
+                }
+            }
+            function getRountHeight(height)
+            {
+                if(height<0)
+                {
+                    return "0";
+                }
+                return height
+            }
+        </script>
+    </head>
+    <body>
+    
+
+	               <div class="kefuqq">
+                <center>
+                    <table>
+                        <tbody><tr>
+                            <td style="padding-right: 5px"></td><td><div class="helptitle" onclick="function(){}" style="color: #EB2A41">猜你想问</div></td>
+                        </tr>
+                    </tbody></table>
+                </center>
+            </div>
+		 <div class="list-group">
+		        <div class="list-group-item">
+		            <div class="helptitle" onclick="toggle(this)" data-no="1">
+		                一、快递位置？
+		                <span class="closeicon" id="closeicon_1" style="display: block;"></span>
+		                <span class="openicon" id="openicon_1" style="display: none;"></span>
+		            </div>
+		            <div class="helpcontent" id="helpcontent_1" style="height: 0px; display: none;">
+		             
+		                <br><b>1、 中通快递：</b>城市学院1号楼菜鸟驿站<br>
+		               
+		                <br><b>2、 申通快递：</b>城市学院4号楼317<br>
+		            
+		                <br><b>3、 韵达快递：</b>松原超市水果摊后面<br>		               
+		                <br><b>4、 圆通快递：</b>浴池 		                
+		                <div style="width: 100%;height: 1px;padding: 0px"></div>
+		            </div>
+		        </div>
+		
+		        <div class="list-group-item">
+		            <div class="helptitle" onclick="toggle(this)" data-no="2">
+		                二、图书馆？
+		                <span class="closeicon" id="closeicon_2" style="display: block;"></span>
+		                <span class="openicon" id="openicon_2" style="display: none;"></span>
+		            </div>
+		            <div class="helpcontent" id="helpcontent_2" style="height: 50px; display: none;">
+		               <br><b>1、 借还书地点：</b>图书馆二楼借还书处<br>
+                       
+                        <br><b>2、 借还书时间：</b>周一至周四8:00--15:40 周五8:00—11：30 12：30—15：40 周六8:00—11：30 12：30—15：40<br>
+                    
+                        <br><b>3、 限制：</b>城市学院在职的教职员工每人限借30册图书，借期限为180天。 学生每人限借15册图书，借期限为90天<br>                       
+                        <br><b>4、 超期罚款规定：</b>超期图书按每册每天0.20元进行处罚。 
+		                
+		                <div style="width: 100%;height: 1px;padding: 0px"></div>
+		            </b></div>
+		        </div>
+		
+		        <div class="list-group-item">
+		            <div class="helptitle" onclick="toggle(this)" data-no="33">
+		                三、电卡饭卡充值
+		                <span class="closeicon" id="closeicon_33" style="display: block;"></span>
+		                <span class="openicon" id="openicon_33" style="display: none;"></span>
+		            </div>
+		            <div class="helpcontent" id="helpcontent_33" style="height: 0px; display: none;">
+                              <br><b> 1、地点:</b>实验楼一楼<br>
+		          
+                             <br><b>2、 其他说明：</b>校园卡充值可自行下载建设银行客户端app，在生活服务一栏找到校园卡充值，搜索大连理工大学城市学院校园卡充值，输入身份证号，充值钱数即可在线充值。     
+                      <br><br>
+                  
+
+		            </div>
+		        </div>
+		
+		  
+		    
+
+    <div class="copyright">
+        <div class="copyrightcontent">
+         更新ing
+        </div>
+    </div>
+    
+    
+    
+
+</body></html>

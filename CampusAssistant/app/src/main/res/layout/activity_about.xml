@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llTitle"
+        android:layout_width="match_parent"
+        android:layout_height="46.5dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_titlebar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#DEDFE0" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_launcher"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_launcher"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="V1.1.0000"
+        android:textColor="#BDBDBD"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_github"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_below="@id/tv_version"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/item_bg_selector">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:text="「GitHub」链接"
+            android:textColor="#333333"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="13dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="22dp"
+            android:background="@drawable/back_selector"
+            android:paddingLeft="5dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:background="#DEDFE0" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

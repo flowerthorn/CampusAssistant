@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_enabled="false"
+        android:drawable="@drawable/feedback_enabled_false_shape"/>
+    <item android:state_enabled="true" android:state_pressed="false"
+        android:drawable="@drawable/feedback_shape_default_shape"/>
+
+    <item android:state_enabled="true" android:state_pressed="true">
+        <shape android:shape="rectangle" >
+
+            <corners android:radius="3.5dp" />
+
+            <solid android:color="@color/yellow_bg_2" />
+
+        </shape>
+    </item>
+
+
+</selector>
