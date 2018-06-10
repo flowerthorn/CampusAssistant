@@ -2,9 +2,10 @@
 <litepal>
     <dbname value="csxy" ></dbname>
 
-    <version value="1" ></version>
+    <version value="4" ></version>
 
     <list>
-        <mapping class="com.csxy.box.bean.BookItem"></mapping>
+        <mapping class="com.csxy.box.bean.BookItem"/>
+        <mapping class="com.csxy.box.bean.MealItem"/>
     </list>
 </litepal>

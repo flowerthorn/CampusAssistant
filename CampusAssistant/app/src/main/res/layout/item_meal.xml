@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginBottom="3dp">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="大酱汤"
+        android:textColor="#222222"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="8元"
+        android:textColor="#222222"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/iv_call"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/tv_name"
+        android:background="@drawable/meal_tel" />
+
+    <ImageView
+        android:id="@+id/iv_collect"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/tv_name"
+        android:background="@drawable/meal_collect_finish" />
+</RelativeLayout>

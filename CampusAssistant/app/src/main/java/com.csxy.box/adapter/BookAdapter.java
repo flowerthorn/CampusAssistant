@@ -81,6 +81,7 @@ public class BookAdapter extends BaseRAdapter {
                 public void onClick(View view) {
                 }
             });
+            L.d("ID","BOOKID"+bookItems.get(position).getId()+"");
             ivCollect.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

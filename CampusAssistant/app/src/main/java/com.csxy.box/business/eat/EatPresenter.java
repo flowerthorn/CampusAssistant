@@ -12,6 +12,6 @@ public class EatPresenter implements EatContract.Presenter {
 
     @Override
     public void gotoMyEatCollect() {
-
+        MealsActivity.actionShow(mView.getContext(),"my_meals","","");
     }
 }

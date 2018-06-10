@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/llTitle"
+        android:layout_width="match_parent"
+        android:layout_height="46.5dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_titlebar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#DEDFE0" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rl_no_meal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_nothing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/empty_list" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_nothing"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="27dp"
+            android:text="暂无收藏餐品"
+            android:textColor="#999999"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/llTitle"
+        android:id="@+id/recyclerView_meal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_layout_bg"
+        android:scrollbars="vertical" />
+
+
+</RelativeLayout>

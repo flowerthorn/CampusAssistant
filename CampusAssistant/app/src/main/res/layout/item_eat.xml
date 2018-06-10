@@ -42,7 +42,7 @@
         android:layout_height="30dp"
         android:background="@drawable/eat_call"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="18dp"
         android:layout_marginRight="80dp"
         />
     <ImageView
@@ -51,7 +51,7 @@
         android:layout_height="30dp"
         android:background="@drawable/eat_menu"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="18dp"
         android:layout_marginRight="30dp"
         />
 
