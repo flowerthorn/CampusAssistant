@@ -40,6 +40,7 @@
         <activity android:name=".business.other.FeedBackActivity"/>
         <activity android:name=".business.other.AboutActivity"/>
         <activity android:name=".business.other.LoginActivity"/>
+        <activity android:name=".business.news.NewsDetailActivity"/>
     </application>
 
 </manifest>

@@ -43,12 +43,12 @@ public class WebViewActivty extends BaseActivity {
 
     @BindView(R.id.tv_title)
     TextView tvTitle;
-    @BindView(R.id.error_layout)
-    View errorView;
     @BindView(R.id.repeat_request_btn)
     TextView repeatRequest;
     @BindView(R.id.webView)
     WebView mWebView;
+    @BindView(R.id.error_layout)
+    View errorView;
     @BindView(R.id.content_layout)
     RelativeLayout rlWebViewContent;
     private boolean isNetError = false;

@@ -26,5 +26,7 @@ public class UrlConstant {
     public static final String LEVEL_QUERY = "http://weixiao.qq.com/apps/public/cet/index.html";
     //程序GitHub 链接
     public static final String MY_GITHUB = "https://github.com/flowerthorn/CampusAssistant";
+    //聚合新闻接口
+    public static final String FETCH_NEWS = "http://v.juhe.cn/toutiao/index?key=02524fb2d1344a1c5abf95d513169d44&type=";
 
 }

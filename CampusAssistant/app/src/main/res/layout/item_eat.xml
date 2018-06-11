@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="2dp"
     android:id="@+id/item_eat"
-    android:background="@drawable/item_bg_selector">
+    android:background="@drawable/item_bg_selector_radius">
 
     <TextView
         android:id="@+id/tv_name"
