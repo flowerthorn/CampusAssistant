@@ -11,10 +11,7 @@ public interface FunctionContract {
 
     }
     interface Presenter extends BasePresenter {
-        void gotoCourse();//前往课程表模块
         void gotoBook();//前往图书模块
-        void gotoGrade();////前往成绩模块
-        void gotoStudyRoom();////前往自习室模块
         void gotoLevel();////前往四六级模块
         void gotoEat();////前往食堂模块
         void gotoDeliver();////前往快递模块

@@ -3,6 +3,7 @@ package com.csxy.box.business.function;
 import com.csxy.box.business.book.BookActivity;
 import com.csxy.box.business.eat.EatActivity;
 import com.csxy.box.business.h5.WebViewActivty;
+import com.csxy.box.business.home.HomeFragment;
 import com.csxy.box.business.weather.WeatherActivity;
 import com.csxy.box.constant.UrlConstant;
 import com.csxy.box.net.ApiRequest;
@@ -20,27 +21,14 @@ public class FunctionPresenter implements FunctionContract.Presenter {
     }
 
     @Override
-    public void gotoCourse() {
-    }
-
-    @Override
     public void gotoBook() {
         BookActivity.actionShow(mFunctionView.getContext());
     }
 
-    @Override
-    public void gotoGrade() {
-
-    }
-
-    @Override
-    public void gotoStudyRoom() {
-
-    }
 
     @Override
     public void gotoLevel() {
-        WebViewActivty.actionShow(mFunctionView.getContext(),"四六级查询", UrlConstant.LEVEL_QUERY,null);
+        WebViewActivty.actionShow(mFunctionView.getContext(), "四六级查询", UrlConstant.LEVEL_QUERY, null);
     }
 
     @Override
@@ -48,10 +36,11 @@ public class FunctionPresenter implements FunctionContract.Presenter {
         EatActivity.actionShow(mFunctionView.getContext());
 
     }
+
     //快递查询
     @Override
     public void gotoDeliver() {
-        WebViewActivty.actionShow(mFunctionView.getContext(),"快递查询", UrlConstant.DELIVER_QUERY,null);
+        WebViewActivty.actionShow(mFunctionView.getContext(), "快递查询", UrlConstant.DELIVER_QUERY, null);
 
     }
 

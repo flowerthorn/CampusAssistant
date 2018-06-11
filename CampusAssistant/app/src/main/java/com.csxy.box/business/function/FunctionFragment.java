@@ -5,9 +5,12 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.csxy.box.R;
 import com.csxy.box.base.BaseTabFragment;
+import com.csxy.box.business.home.HomeFragment;
 import com.csxy.box.utils.ToastUtils;
+
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -42,7 +45,7 @@ public class FunctionFragment extends BaseTabFragment implements FunctionContrac
      */
     @OnClick(R.id.ll_course)
     public void courseOnClick() {
-        mPresenter.gotoCourse();
+        ((HomeFragment)(this.getParentFragment())).switchToCourseFragment();
     }
 
     /**
@@ -51,22 +54,6 @@ public class FunctionFragment extends BaseTabFragment implements FunctionContrac
     @OnClick(R.id.ll_book)
     public void bookOnclick() {
         mPresenter.gotoBook();
-    }
-
-    /**
-     * 点击成绩查询
-     */
-    @OnClick(R.id.ll_grade)
-    public void gradeOnClick() {
-        mPresenter.gotoGrade();
-    }
-
-    /**
-     * 点击自习室查询
-     */
-    @OnClick(R.id.ll_study_room)
-    public void stydyRoomOnClick() {
-        mPresenter.gotoStudyRoom();
     }
 
     /**
@@ -108,5 +95,11 @@ public class FunctionFragment extends BaseTabFragment implements FunctionContrac
     public void roomOnClick() {
         ToastUtils.showLongToast("正在更新该接口，敬请期待");
     }
-
+    /**
+     * 点击成绩查询
+     */
+    @OnClick(R.id.ll_grade)
+    public void gradeOnClick() {
+        ToastUtils.showLongToast("正在更新该接口，敬请期待");
+    }
 }

@@ -164,6 +164,9 @@ public class HomeFragment extends BaseTabFragment {
         TextView tv = (TextView) mRadioGroup.getChildAt(position);
         return (int) ViewUtils.getTextWidth(tv.getPaint(), tv.getText().toString());
     }
+    public void switchToCourseFragment(){
+        rbCourse.setChecked(true);
+    }
 
 
 }
