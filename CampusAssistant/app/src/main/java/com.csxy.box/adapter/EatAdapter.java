@@ -52,6 +52,10 @@ public class EatAdapter extends BaseRAdapter {
         if (eatItem.getTelephone().equals("不送餐")) {
             ivCall.setVisibility(View.GONE);
         }
+        else {
+            ivCall.setVisibility(View.VISIBLE);
+        }
+        ivCall.setTag(eatItem.getId());
 
         //点击事件
         itemEat.setOnClickListener(new View.OnClickListener() {

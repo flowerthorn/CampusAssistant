@@ -10,6 +10,7 @@ import com.csxy.box.R;
 import com.csxy.box.base.adapter.BaseRAdapter;
 import com.csxy.box.base.adapter.RViewHolder;
 import com.csxy.box.bean.MealItem;
+import com.csxy.box.utils.L;
 import com.csxy.box.widget.alert.AlertCenter;
 
 import org.litepal.crud.DataSupport;
@@ -24,6 +25,7 @@ import java.util.List;
 public class MealsAdapter extends BaseRAdapter {
     private List<MealItem> mealItemList = new ArrayList<>();
     private String telephone;
+    private String fromType;
     private Context mContext;
 
     public MealsAdapter(Context context) {
@@ -50,11 +52,17 @@ public class MealsAdapter extends BaseRAdapter {
         final ImageView ivCollect = holder.iv(R.id.iv_collect);
         tvName.setText(mealItem.getName());
         tvPrice.setText(mealItem.getPrice());
-        if (telephone.equals("不送餐")|| TextUtils.isEmpty(telephone)) {
+        if (fromType.equals("my_meal")){
+            //来自我的收藏
+            telephone=mealItem.getTel();
+        }
+        if (telephone.equals("不送餐") || TextUtils.isEmpty(telephone)) {
             ivCall.setVisibility(View.GONE);
         } else {
             ivCall.setVisibility(View.VISIBLE);
         }
+
+        ivCall.setTag(mealItem.getName());
         ivCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,12 +102,13 @@ public class MealsAdapter extends BaseRAdapter {
         });
     }
 
-    public synchronized void addData(List<MealItem> items, String tel) {
+    public synchronized void addData(List<MealItem> items, String tel, String type) {
         if (items == null || items.size() == 0) {
             return;
         }
         mealItemList = items;
         telephone = tel;
+        fromType = type;
         notifyDataSetChanged();
     }
 }

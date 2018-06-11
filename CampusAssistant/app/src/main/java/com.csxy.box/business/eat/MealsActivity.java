@@ -76,7 +76,7 @@ public class MealsActivity extends BaseActivity {
             recyclerViewEat.setVisibility(View.GONE);
         }
         else {
-            mealsAdapter.addData(allCollectMeals,  allCollectMeals.get(0).getTel());
+            mealsAdapter.addData(allCollectMeals,  null,"my_meal");
         }
     }
 
@@ -85,7 +85,7 @@ public class MealsActivity extends BaseActivity {
             @Override
             public void onResponse(String url, MealObj response, int statusCode) {
                 if (response != null) {
-                    mealsAdapter.addData(response.getData(), telephone);
+                    mealsAdapter.addData(response.getData(), telephone,"search_meal");
                 }
             }
 

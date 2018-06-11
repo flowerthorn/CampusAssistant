@@ -1,18 +1,13 @@
 package com.csxy.box.business.function;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-
 import com.csxy.box.R;
 import com.csxy.box.base.BaseTabFragment;
 import com.csxy.box.utils.ToastUtils;
-
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
