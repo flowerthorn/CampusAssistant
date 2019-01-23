@@ -21,7 +21,9 @@
 - greendao数据库 smartrefreshlayout刷新控件 glide图片加载 gson数据解析
 效果图
 
-![](https://github.com/flowerthorn/CampusAssistant/blob/v1.0/效果/主页.png "主页")
+<div align=center><img width="480" height="864" src="https://img-blog.csdn.net/20161028230559575"/></div>
+
+![](https://github.com/flowerthorn/CampusAssistant/blob/v1.0/效果/主页.png "主页" =480x854)
 ![](https://github.com/flowerthorn/CampusAssistant/blob/v1.0/效果/资讯.png "资讯")
 ![](https://github.com/flowerthorn/CampusAssistant/blob/v1.0/效果/我的.png "我的")
 
